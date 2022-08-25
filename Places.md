@@ -27,6 +27,7 @@ title: Places
 </style>
 </head>
 <body>
+<img src="../images/Photos/wuppertal.jpg" alt="photo_wuppertal" width="260" height=auto>
 
 <div class="clearfix">
   <div class="img-container">
