@@ -1,0 +1,35 @@
+<div class="sidebar">
+    <div class="sidebar-about">
+      <script src="https://kit.fontawesome.com/dd5f00e900.js" crossorigin="anonymous"></script>
+      <center><img src="../images/MarenzJulian_LBS.jpg" alt="photo_julianmarenz" width="260" height=auto></center> 
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">PhD Student in Economics at <br>London Business School</p>
+      <a href="mailto:jmarenz@london.edu"><i class="fa-solid fa-envelope fa-lg"></i></a>
+      <a href="https://twitter.com/JulianMarenz" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a> 
+      <a href="https://www.linkedin.com/in/julian-marenz-9768201a9/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+      <a href="https://github.com/julianmarenz" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    </nav>
+</div>
