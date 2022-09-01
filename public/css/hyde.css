@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -81,8 +81,8 @@ html {
   color: #fff;
   margin-top: 0;
   margin-bottom: -5px;
-  font-family: "PT Sans", serif;
-  font-size: 2.7rem;
+  font-family: "Verdana", serif;
+  font-size: 2rem;
 }
 
 /* Sidebar nav */
