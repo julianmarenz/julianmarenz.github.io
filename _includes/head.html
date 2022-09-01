@@ -7,14 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
+    {{ site.title }} &middot; {{ page.title }} 
   </title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="{{ "/" | relative_url }}public/css/resetcss.css">
   <link rel="stylesheet" href="{{ "/" | relative_url }}public/css/poole.css">
   <link rel="stylesheet" href="{{ "/" | relative_url }}public/css/syntax.css">
   <link rel="stylesheet" href="{{ "/" | relative_url }}public/css/hyde.css">

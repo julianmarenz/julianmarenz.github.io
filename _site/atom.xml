@@ -4,22 +4,13 @@
  <title>Julian Marenz</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-08-26T10:31:24+01:00</updated>
+ <updated>2022-09-01T16:26:59+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
    <email></email>
  </author>
 
- 
- <entry>
-   <title>PhD at London Business School</title>
-   <link href="http://localhost:4000/2022/08/25/PhD-student/"/>
-   <updated>2022-08-25T00:00:00+01:00</updated>
-   <id>http://localhost:4000/2022/08/25/PhD-student</id>
-   <content type="html">&lt;p&gt;I will be starting my PhD in economics at London Business School in September 2022! After two great years at the Wheeler Institute for Business and Development, I am excited to begin this new chapter of my academic career.&lt;/p&gt;
-</content>
- </entry>
  
 
 </feed>

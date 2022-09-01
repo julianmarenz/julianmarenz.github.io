@@ -3,14 +3,16 @@
 
   {% include head.html %}
 
-  <body>
-    <link rel="stylesheet" href="{{ "/" | relative_url }}public/css/mylayout.css">
+  <head>
+    <link href="{{ "/" | relative_url }}public/css/mylayout.css" rel="stylesheet">
+  </head>
 
+  <body>
     {% include sidebar.html %}
 
     <div class="content container">
       {{ content }}
+        <img src="../images/lbs/lbs_logo.jpg" alt="lbs_logo_jpg" width="100" height=auto class="footer-img">
     </div>
-
   </body>
 </html>

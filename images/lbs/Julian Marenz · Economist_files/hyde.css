@@ -81,8 +81,8 @@ html {
   color: #fff;
   margin-top: 0;
   margin-bottom: -5px;
-  font-family: "PT Sans", serif;
-  font-size: 2.7rem;
+  font-family: "Cambria", serif;
+  font-size: 2.3rem;
 }
 
 /* Sidebar nav */
@@ -126,7 +126,6 @@ a.sidebar-nav-item:focus {
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
-  width: 10000000px;
 }
 
 @media (min-width: 48em) {

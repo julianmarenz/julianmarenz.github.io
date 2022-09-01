@@ -3,9 +3,12 @@ p {
     text-justify: inter-word;
   }
 
+.square {
+  border-radius: 0px;
+  }
 
 .footer-img{
   position: fixed;
-  bottom: 0px;
-  right: 20px;
+  bottom: 50px;
+  right: 50px;
 }
