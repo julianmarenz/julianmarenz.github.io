@@ -5,7 +5,7 @@ p {
 
 
 .footer-img{
-  position: fixed;
-  bottom: 0px;
-  right: 20px;
+  position: absolute;
+  left: 110%;
+  bottom: 0;
 }

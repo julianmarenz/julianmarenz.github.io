@@ -45,6 +45,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 html {
@@ -293,6 +294,8 @@ tbody tr:nth-child(odd) th {
   padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
+  height: auto;
+  /* IMPORTANT -- always set 'height: auto;' immediately after the min-height attribute */
 }
 
 
