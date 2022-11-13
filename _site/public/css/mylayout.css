@@ -4,8 +4,8 @@ p {
   }
 
 
-.footer-img{
-  position: absolute;
-  left: 110%;
-  bottom: 0;
+.navbar-img{
+  position: fixed;
+  right: 1%;
+  top: 1.5%;
 }
