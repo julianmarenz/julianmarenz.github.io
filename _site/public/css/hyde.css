@@ -29,9 +29,9 @@
  *
  * Update the foundational and global aspects of the page.
  */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
  html {
-  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -85,7 +85,7 @@
 /* About section */
 .navbar-about h1 {
   color: #fff;
-  font-family: "Palatino", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   text-align: left;
   display: inline-block;
@@ -94,6 +94,7 @@
 /* navbar nav */
 .navbar-nav {
   width: 100%;
+  font-family: "Roboto", sans-serif;;
   text-align: center;
   display: inline-block;
   position: absolute;

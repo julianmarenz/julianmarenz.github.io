@@ -43,22 +43,25 @@
 
 html,
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
   html {
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
   }
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   color: #515151;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
@@ -81,6 +84,7 @@ a:focus {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
   margin-bottom: .4rem;
   font-weight: bold;
   line-height: 1.25;
