@@ -1,0 +1,47 @@
+/* Basic page defaults */
+html {
+    font-size: 16px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #111;
+    background: #fff;
+  }
+  
+  /* Keep content readable (not full-width on large screens) */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* Header + navigation */
+  header {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  nav {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    flex-wrap: wrap; /* helps on small screens */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #0b57d0;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content spacing */
+  main {
+    padding: 24px 0;
+  }
+  
