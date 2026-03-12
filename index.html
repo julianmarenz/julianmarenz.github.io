@@ -2,24 +2,92 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Professional academic website for Julian Marenz."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Your Name</title>
+    <title>Julian Marenz | Home</title>
   </head>
-
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-      </nav>
-      <hr />
-    </header>
-  
-    <main class="container">
-      <h1>Your Name</h1>
-      <p>Welcome to my academic website.</p>
-    </main>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="site-brand" href="index.html" aria-label="Julian Marenz home">
+            <img
+              class="site-logo"
+              src="files/images/lbs_logo.jpg"
+              alt="London Business School logo"
+            />
+            <span class="site-name" aria-label="Julian Marenz">
+              <span class="site-name-line" aria-hidden="true">
+                <span>J</span><span>U</span><span>L</span><span>I</span><span>A</span><span>N</span>
+              </span>
+              <span class="site-name-line" aria-hidden="true">
+                <span>M</span><span>A</span><span>R</span><span>E</span><span>N</span><span>Z</span>
+              </span>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="active" href="index.html" aria-current="page">Home</a>
+            <a href="research.html">Research</a>
+            <a href="cv.html">CV</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container home-main">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">PhD Student in Economics | London Business School</p>
+            <h1>Welcome.</h1>
+            <p class="lead">
+              My name is Julian Marenz and I am a 4th year PhD student in economics at London Business School. My research interests are in international trade, globalisation and economic history.            </p>
+            <div class="contact-links" aria-label="Contact links">
+              <a class="contact-button" href="mailto:jmarenz@london.edu" aria-label="Email Julian Marenz">
+                <i class="contact-icon fa-solid fa-envelope fa-lg" aria-hidden="true"></i>
+                <span>Email</span>
+              </a>
+              <a
+                class="contact-button"
+                href="https://github.com/julianmarenz"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Julian Marenz GitHub profile"
+              >
+                <i class="contact-icon fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+              <a
+                class="contact-button"
+                href="https://www.linkedin.com/in/julian-marenz-9768201a9/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Julian Marenz LinkedIn profile"
+              >
+                <i class="contact-icon fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="portrait-panel">
+            <img
+              class="portrait-image"
+              src="files/images/A54I8426.jpg"
+              alt="Portrait of Julian Marenz"
+            />
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

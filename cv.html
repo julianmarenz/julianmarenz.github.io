@@ -2,24 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Your Name — CV</title>
+    <title>Julian Marenz | CV</title>
   </head>
-
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-      </nav>
-      <hr />
-    </header>
-  
-    <main class="container">
-      <h1>Curriculum Vitae</h1>
-      <p>This page will contain my CV and a downloadable PDF.</p>
-    </main>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="site-brand" href="index.html" aria-label="Julian Marenz home">
+            <img
+              class="site-logo"
+              src="files/images/lbs_logo.jpg"
+              alt="London Business School logo"
+            />
+            <span class="site-name" aria-label="Julian Marenz">
+              <span class="site-name-line" aria-hidden="true">
+                <span>J</span><span>U</span><span>L</span><span>I</span><span>A</span><span>N</span>
+              </span>
+              <span class="site-name-line" aria-hidden="true">
+                <span>M</span><span>A</span><span>R</span><span>E</span><span>N</span><span>Z</span>
+              </span>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a class="active" href="cv.html" aria-current="page">CV</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container inner-page">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>CV</h1>
+        <div class="content-card">
+          <div class="document-frame">
+            <iframe
+              src="files/cv/marenz_cv.pdf#toolbar=0&navpanes=0&scrollbar=0&pagemode=none"
+              class="pdf-viewer"
+              title="Julian Marenz CV"
+            ></iframe>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/cv-download.js"></script>
   </body>
 </html>
