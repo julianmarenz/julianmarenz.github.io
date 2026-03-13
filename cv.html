@@ -6,6 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <link rel="icon" type="image/x-icon" href="files/images/lbs_logo.ico" />
+    <link rel="shortcut icon" href="files/images/lbs_logo.ico" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Julian Marenz | CV</title>
   </head>
@@ -28,7 +30,21 @@
               </span>
             </span>
           </a>
-          <nav class="site-nav" aria-label="Primary">
+          <nav class="site-nav desktop-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a class="active" href="cv.html" aria-current="page">CV</a>
+          </nav>
+          <details class="mobile-nav">
+            <summary aria-label="Open navigation menu">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+          </details>
+          <nav class="mobile-nav-panel" aria-label="Mobile primary">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
             <a class="active" href="cv.html" aria-current="page">CV</a>
@@ -40,6 +56,15 @@
         <p class="eyebrow">Curriculum Vitae</p>
         <h1>CV</h1>
         <div class="content-card">
+          <div class="mobile-cv-card">
+            <p>For the best reading experience on mobile, open the CV as a full PDF.</p>
+            <a
+              class="button-link"
+              href="files/cv/marenz_cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >Open CV (PDF)</a>
+          </div>
           <div class="document-frame">
             <iframe
               src="files/cv/marenz_cv.pdf#toolbar=0&navpanes=0&scrollbar=0&pagemode=none"
@@ -50,6 +75,5 @@
         </div>
       </main>
     </div>
-    <script src="assets/js/cv-download.js"></script>
   </body>
 </html>

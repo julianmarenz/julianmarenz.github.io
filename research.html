@@ -6,6 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <link rel="icon" type="image/x-icon" href="files/images/lbs_logo.ico" />
+    <link rel="shortcut icon" href="files/images/lbs_logo.ico" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Julian Marenz | Research</title>
   </head>
@@ -28,7 +30,21 @@
               </span>
             </span>
           </a>
-          <nav class="site-nav" aria-label="Primary">
+          <nav class="site-nav desktop-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a class="active" href="research.html" aria-current="page">Research</a>
+            <a href="cv.html">CV</a>
+          </nav>
+          <details class="mobile-nav">
+            <summary aria-label="Open navigation menu">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+          </details>
+          <nav class="mobile-nav-panel" aria-label="Mobile primary">
             <a href="index.html">Home</a>
             <a class="active" href="research.html" aria-current="page">Research</a>
             <a href="cv.html">CV</a>
@@ -45,40 +61,51 @@
             <article class="paper-entry">
               <h3 class="paper-title">
                 Carbon Leakage to Developing Countries
-                <a
-                  class="paper-link"
-                  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4833343"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  [PAPER]
-                </a>
               </h3>
               <p class="paper-authors">
-                with <a href="https://www.diegokaenzig.com/research" target="_blank" rel="noreferrer">Diego Känzig</a> &
+                with <a href="https://www.diegokaenzig.com/home" target="_blank" rel="noreferrer">Diego K&auml;nzig</a> &
                 <a href="https://marcelolbert.com/" target="_blank" rel="noreferrer">Marcel Olbert</a>
               </p>
-              <details class="paper-abstract">
-                <summary>Abstract</summary>
-                <p>
-                  How do climate policies in developed countries spill over to the
-                  developing world? Using a novel dataset that combines multinational
-                  firms' subsidiary locations with spatial emission data, we study how
-                  the carbon footprint of multinational firms in Africa changes in
-                  response to more stringent climate policies in Europe. Exploiting
-                  variation in multinationals' exposure to carbon prices across
-                  European countries, we find that emissions of their African
-                  subsidiaries increase as the multinationals' European operations face
-                  higher carbon prices. At the same time, multinationals reduce their
-                  domestic investment in Europe while worldwide investment remains
-                  unchanged -- consistent with the notion that these firms shift some
-                  of their operations abroad. We confirm these results at the
-                  aggregate level, documenting a significant increase in economic
-                  activity and emissions in Africa. Policies to mitigate leakage
-                  should thus balance environmental concerns against development and
-                  equity considerations.
-                </p>
-              </details>
+              <div class="paper-actions">
+                <div class="paper-action-row">
+                  <button
+                    class="paper-action-button abstract-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="abstract-carbon-leakage"
+                  >
+                    Abstract
+                  </button>
+                  <a
+                    class="paper-action-button"
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4833343"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Paper
+                  </a>
+                </div>
+                <div class="paper-abstract-panel" id="abstract-carbon-leakage" hidden>
+                  <p>
+                    How do climate policies in developed countries spill over to the
+                    developing world? Using a novel dataset that combines multinational
+                    firms' subsidiary locations with spatial emission data, we study how
+                    the carbon footprint of multinational firms in Africa changes in
+                    response to more stringent climate policies in Europe. Exploiting
+                    variation in multinationals' exposure to carbon prices across
+                    European countries, we find that emissions of their African
+                    subsidiaries increase as the multinationals' European operations face
+                    higher carbon prices. At the same time, multinationals reduce their
+                    domestic investment in Europe while worldwide investment remains
+                    unchanged -- consistent with the notion that these firms shift some
+                    of their operations abroad. We confirm these results at the
+                    aggregate level, documenting a significant increase in economic
+                    activity and emissions in Africa. Policies to mitigate leakage
+                    should thus balance environmental concerns against development and
+                    equity considerations.
+                  </p>
+                </div>
+              </div>
             </article>
           </section>
 
@@ -104,5 +131,6 @@
         </div>
       </main>
     </div>
+    <script src="assets/js/research.js"></script>
   </body>
 </html>

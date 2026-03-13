@@ -117,6 +117,58 @@ img { display: block; max-width: 100%; }
   gap: 0.45rem;
 }
 
+.mobile-nav {
+  display: none;
+  margin-left: auto;
+}
+
+.mobile-nav summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid rgba(44, 42, 38, 0.14);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.mobile-nav-icon span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #666a70;
+}
+
+.mobile-nav-panel {
+  display: none;
+}
+
+.mobile-nav-panel a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.mobile-nav-panel a.active,
+.mobile-nav-panel a:hover,
+.mobile-nav-panel a:focus-visible {
+  background: var(--accent-soft);
+  color: var(--accent);
+  outline: none;
+}
+
 .site-nav a {
   padding: 0.55rem 0.9rem;
   text-decoration: none;
@@ -212,7 +264,7 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
 
 .content-card p,
 .paper-authors,
-.paper-abstract p {
+.paper-abstract-panel p {
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -282,21 +334,6 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.paper-link {
-  margin-left: 0.45rem;
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--accent);
-  white-space: nowrap;
-}
-
-.paper-link:hover,
-.paper-link:focus-visible {
-  text-decoration: underline;
-  outline: none;
-}
-
 .paper-authors {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -313,26 +350,47 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
   outline: none;
 }
 
-.paper-abstract summary {
+.paper-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.paper-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.paper-action-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.42rem 0.8rem;
+  border: 0;
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
   font-size: 0.92rem;
   font-weight: 700;
+  font-family: inherit;
+  line-height: 1.2;
+  text-decoration: none;
   cursor: pointer;
-  list-style: none;
 }
 
-.paper-abstract summary::-webkit-details-marker {
-  display: none;
+.paper-action-button[aria-expanded="true"] {
+  background: rgba(16, 56, 95, 0.18);
 }
 
-.paper-abstract p {
-  margin: 0.9rem 0 0;
+.paper-abstract-panel {
+  width: 100%;
+}
+
+.paper-abstract-panel p {
+  margin: 0;
   width: calc(100% - 1.5rem);
   margin-left: auto;
   margin-right: auto;
@@ -354,6 +412,10 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
   color: #fff;
   font-weight: 700;
   text-decoration: none;
+}
+
+.mobile-cv-card {
+  display: none;
 }
 
 .document-frame {
@@ -380,28 +442,51 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
 }
 
 @media (max-width: 560px) {
-  .nav-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   body {
-    padding-top: 112px;
+    padding-top: 0;
   }
 
   .page-shell {
-    min-height: calc(100vh - 112px);
+    min-height: 100vh;
   }
 
-  .site-nav { width: 100%; }
+  .site-header {
+    position: sticky;
+  }
 
-  .site-nav a {
-    flex: 1 1 auto;
-    text-align: center;
+  .nav-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav[open] + .mobile-nav-panel {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 0.65rem 0 0;
+  }
+
+  .mobile-nav-panel a {
+    display: block;
+    padding: 0.55rem 0.9rem;
   }
 
   .hero {
     padding-top: 4rem;
+  }
+
+  .lead {
+    font-size: 1.24rem;
   }
 
   .news-card,
@@ -411,7 +496,41 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
   }
 
   .contact-links {
-    gap: 0.65rem;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+  }
+
+  .contact-button {
+    flex: 1 1 0;
+    justify-content: center;
+    gap: 0.28rem;
+    min-width: 0;
+    padding: 0.62rem 0.35rem;
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+
+  .contact-icon {
+    min-width: auto;
+    font-size: 0.84rem;
+  }
+
+  .mobile-cv-card {
+    display: block;
+  }
+
+  .mobile-cv-card p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    text-align: left;
+  }
+
+  .mobile-cv-card .button-link {
+    width: 100%;
+  }
+
+  .document-frame {
+    display: none;
   }
 
   .pdf-viewer { min-height: 78vh; }

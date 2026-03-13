@@ -10,6 +10,8 @@
       name="description"
       content="Professional academic website for Julian Marenz."
     />
+    <link rel="icon" type="image/x-icon" href="files/images/lbs_logo.ico" />
+    <link rel="shortcut icon" href="files/images/lbs_logo.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -36,7 +38,21 @@
               </span>
             </span>
           </a>
-          <nav class="site-nav" aria-label="Primary">
+          <nav class="site-nav desktop-nav" aria-label="Primary">
+            <a class="active" href="index.html" aria-current="page">Home</a>
+            <a href="research.html">Research</a>
+            <a href="cv.html">CV</a>
+          </nav>
+          <details class="mobile-nav">
+            <summary aria-label="Open navigation menu">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+          </details>
+          <nav class="mobile-nav-panel" aria-label="Mobile primary">
             <a class="active" href="index.html" aria-current="page">Home</a>
             <a href="research.html">Research</a>
             <a href="cv.html">CV</a>
